@@ -4,10 +4,10 @@ import Square from "./Square";
 describe("Square",()=>{
     it("Should show the text",()=>{
         //Arrange
-        render(<Square value="test_value"/>);
+        const tree=render(<Square value="test_value"/>);
         //Act
         //Assert
-        expect(screen.getByRole('button')).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
         // screen.debug(screen.getByRole('button'));
     });
 });
